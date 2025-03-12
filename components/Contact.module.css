@@ -1,0 +1,67 @@
+.contact {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2c2c2c;
+  border: 2px solid #3a3a3a;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #00fff9;
+  box-shadow: 0 0 10px rgba(0, 255, 249, 0.5);
+}
+
+.textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitButton {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #00fff9;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #00e6e6;
+  transform: translateY(-2px);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}

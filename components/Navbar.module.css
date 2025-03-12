@@ -1,0 +1,79 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+}
+
+.navItem {
+  margin-left: 2rem;
+}
+
+.navLink {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::before,
+.navLink.active::before {
+  width: 100%;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px var(--accent);
+  }
+
+  50% {
+    text-shadow: 0 0 20px var(--accent), 0 0 30px var(--accent);
+  }
+
+  100% {
+    text-shadow: 0 0 5px var(--accent);
+  }
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--accent);
+  animation: glow 1.5s infinite;
+}
